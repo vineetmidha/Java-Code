@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class PracticeClass {
+
+	static public int fibo (int n) {
+		int a = 0, b = 1, c = 0;
+		
+		for (int i = 0; i < n; i++) {
+			c = a + b;
+			a = b;
+			b = c;
+		}
+		
+		return a;
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+			
+		System.out.println("Enter terms to generate: ");
+		
+		int terms = s.nextInt();
+		
+		for (int i = 0; i < terms; i++) {
+			System.out.print(fibo(i) + " ");
+		}
+	}
+}
+
+/*
+
+Enter terms to generate: 
+15
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 
+
+Enter terms to generate: 
+10
+0 1 1 2 3 5 8 13 21 34 
+
+*/
