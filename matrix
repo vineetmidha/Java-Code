@@ -1,5 +1,3 @@
-//import java.util.Scanner;
-
 class Matrix{
 	private int nrows;
 	private int ncols;
