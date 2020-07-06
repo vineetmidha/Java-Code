@@ -1,0 +1,165 @@
+import java.util.Scanner;
+
+public class PracticeClass {
+
+	public static void main(String[] args) {
+		
+        Scanner s = new Scanner(System.in);
+        int choice = 0;
+        
+        int[] prices = {0,50,100,150,200};
+        int qty = 0;
+        int cost1 = 0, cost2 = 0, cost3 = 0, cost4 = 0;
+        int total = 0;
+        
+        do
+        {
+	        System.out.println("Jhakaas Dhaba");
+	        System.out.println("=============");
+	        
+	        System.out.println("1. Tasty Golgappe");
+	        System.out.println("2. Kariri Chowmein");
+	        System.out.println("3. Garam Garam Dosa");
+	        System.out.println("4. Thandi Thandi Kulfi");
+	        System.out.println("5. Tummi Tull");
+
+            System.out.print("Enter Choice [1-5]: ");
+    
+	        choice = s.nextInt();
+	        
+	        switch(choice)
+	        {
+	            case 1: 
+	            	System.out.println("Enter Quantity: "); 
+	            	qty = s.nextInt();
+	            	cost1 += (qty * prices[choice]);
+	            	System.out.println("Item : Gol Gappe");
+	            	System.out.println("Quantity = " + qty);
+	            	System.out.println("Price Per Piece: " + prices[choice]);
+	            	System.out.println("Total Cost = " + cost1);
+	                break;
+	                
+	            case 2: 
+	            	System.out.println("Enter Quantity: "); 
+	            	qty = s.nextInt();
+	            	cost2 += (qty * prices[choice]);
+	            	System.out.println("Item : Chowmein");
+	            	System.out.println("Quantity = " + qty);
+	            	System.out.println("Price Per Piece: " + prices[choice]);
+	            	System.out.println("Total Cost = " + cost2);
+	                break;
+
+	            case 3: 
+	            	System.out.println("Enter Quantity: "); 
+	            	qty = s.nextInt();
+	            	cost3 += (qty * prices[choice]);
+	            	System.out.println("Item : Dosa");
+	            	System.out.println("Quantity = " + qty);
+	            	System.out.println("Price Per Piece: " + prices[choice]);
+	            	System.out.println("Total Cost = " + cost3);
+	                break;
+
+	            case 4: 
+	            	System.out.println("Enter Quantity: "); 
+	            	qty = s.nextInt();
+	            	cost4 += (qty * prices[choice]);
+	            	System.out.println("Item : Kulfi");
+	            	System.out.println("Quantity = " + qty);
+	            	System.out.println("Price Per Piece: " + prices[choice]);
+	            	System.out.println("Total Cost = " + cost4);
+	                break;
+
+	            case 5: 
+	            	total = cost1 + cost2 + cost3 + cost4;
+	            	System.out.println("Total Amount = " + total);
+	            	System.out.println("Thanks for coming. Pls visit again!!!!!"); 
+	            	break;
+	            
+	            default: 
+	            	System.out.println("\nSorry ji! Yeh to nhi milega\n"); 
+	        }
+        }while (choice != 5);	
+	}
+}
+
+/*
+Output:
+
+Jhakaas Dhaba
+=============
+1. Tasty Golgappe
+2. Kariri Chowmein
+3. Garam Garam Dosa
+4. Thandi Thandi Kulfi
+5. Tummi Tull
+Enter Choice [1-5]: 1
+Enter Quantity: 
+2
+Item : Gol Gappe
+Quantity = 2
+Price Per Piece: 50
+Total Cost = 100
+Jhakaas Dhaba
+=============
+1. Tasty Golgappe
+2. Kariri Chowmein
+3. Garam Garam Dosa
+4. Thandi Thandi Kulfi
+5. Tummi Tull
+Enter Choice [1-5]: 2
+Enter Quantity: 
+3
+Item : Chowmein
+Quantity = 3
+Price Per Piece: 100
+Total Cost = 300
+Jhakaas Dhaba
+=============
+1. Tasty Golgappe
+2. Kariri Chowmein
+3. Garam Garam Dosa
+4. Thandi Thandi Kulfi
+5. Tummi Tull
+Enter Choice [1-5]: 4
+Enter Quantity: 
+5
+Item : Kulfi
+Quantity = 5
+Price Per Piece: 200
+Total Cost = 1000
+Jhakaas Dhaba
+=============
+1. Tasty Golgappe
+2. Kariri Chowmein
+3. Garam Garam Dosa
+4. Thandi Thandi Kulfi
+5. Tummi Tull
+Enter Choice [1-5]: 7
+
+Sorry ji! Yeh to nhi milega
+
+Jhakaas Dhaba
+=============
+1. Tasty Golgappe
+2. Kariri Chowmein
+3. Garam Garam Dosa
+4. Thandi Thandi Kulfi
+5. Tummi Tull
+Enter Choice [1-5]: 3
+Enter Quantity: 
+4
+Item : Dosa
+Quantity = 4
+Price Per Piece: 150
+Total Cost = 600
+Jhakaas Dhaba
+=============
+1. Tasty Golgappe
+2. Kariri Chowmein
+3. Garam Garam Dosa
+4. Thandi Thandi Kulfi
+5. Tummi Tull
+Enter Choice [1-5]: 5
+Total Amount = 2000
+Thanks for coming. Pls visit again!!!!!
+*/
