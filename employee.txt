@@ -1,0 +1,46 @@
+// Simple class with a constructor 
+// Create three objects and display the data
+
+class Employee
+{
+	String name;
+	int year;
+	double salary;
+	String address;
+	
+	Employee(String n, int yr, double sal, String add)
+	{
+		name = n;
+		year = yr;
+		salary = sal;
+		address = add;				
+	}
+	
+	void display()
+	{
+		System.out.println(name + "\t" + year + "\t" + address);
+	}
+}
+
+public class PracticeClass {
+
+	public static void main(String[] args) {
+		Employee e1 = new Employee("Robert", 1994, 100000, "64-C Walls Street");
+		Employee e2 = new Employee("Sam", 2000, 200000, "68-D Walls Street");
+		Employee e3 = new Employee("John", 1999, 300000, "26-B Walls Street");
+		
+		System.out.println("Name\tYear\tAddress");
+		System.out.println("====\t====\t=======");
+		e1.display();
+		e2.display();
+		e3.display();
+	}
+}
+
+/*
+Name	Year	Address
+====	====	=======
+Robert	1994	64-C Walls Street
+Sam	2000	68-D Walls Street
+John	1999	26-B Walls Street
+*/
